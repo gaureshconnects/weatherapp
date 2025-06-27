@@ -15,13 +15,11 @@ A fully responsive Weather App built using **HTML**, **CSS**, and **JavaScript**
 
 ## 🛠️ Tech Stack
 
-HTML5 – Markup and layout
+![HTML5](https://img.shields.io/badge/HTML5-5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)
+![OpenWeatherMap](https://img.shields.io/badge/OpenWeatherMap-API-orange?logo=OpenWeatherMap&logoColor=white)
 
-CSS3 – Styling with gradients and flexbox
-
-JavaScript (ES6) – Logic, API integration, and DOM manipulation
-
-OpenWeatherMap API – Real-time weather data
 
 # ⚙️ How It Works
 
