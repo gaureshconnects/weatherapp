@@ -61,9 +61,6 @@ units → metric for Celsius
 
 # ⭐ If you found this project helpful, feel free to give it a star!
 
-
----
-
 Let me know if you'd like:
 - A Markdown badge version (`shields.io`)
 - Auto-generated `LICENSE` file
