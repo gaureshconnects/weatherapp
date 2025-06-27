@@ -2,6 +2,10 @@
 
 A fully responsive Weather App built using **HTML**, **CSS**, and **JavaScript**, powered by the **OpenWeatherMap API**. It allows users to check real-time weather conditions by entering any city name. The app displays temperature, humidity, wind speed, and weather icons based on live conditions.
 
+## 🔗 Live Demo
+
+🌐 [View Live on GitHub Pages](https://cheery-centaur-0d7ecc.netlify.app/)  
+
 
 ## 📌 Features
 
