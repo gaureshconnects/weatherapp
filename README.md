@@ -61,7 +61,7 @@ units → metric for Celsius
 ![image alt](https://github.com/itsgauresh/weatherapp/blob/106a989ef91115d12a5ac510c19739430492b83d/Screenshot%202025-06-27%20235438.png)
 ![image alt](https://github.com/itsgauresh/weatherapp/blob/106a989ef91115d12a5ac510c19739430492b83d/Screenshot%202025-06-27%20235502.png)
 
-# ⭐ If you found this project helpful, feel free to give it a star!
+# ⭐ If you found this project helpful, feel free to give a star!
 
 Let me know if you'd like:
 - A Markdown badge version (`shields.io`)
