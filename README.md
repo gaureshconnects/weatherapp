@@ -4,7 +4,7 @@ A fully responsive Weather App built using **HTML**, **CSS**, and **JavaScript**
 
 ## 🔗 Live Demo
 
-🌐 [View Live on GitHub Pages](https://cheery-centaur-0d7ecc.netlify.app/)  
+🌐 [View Live on GitHub Pages](https://andajofweather.netlify.app/)  
 
 
 ## 📌 Features
