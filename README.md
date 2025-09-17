@@ -1,20 +1,28 @@
-# 🌦️ Weather App
+##🌦️ Andaaj of Weather
 
-A fully responsive Weather App built using **HTML**, **CSS**, and **JavaScript**, powered by the **OpenWeatherMap API**. It allows users to check real-time weather conditions by entering any city name. The app displays temperature, humidity, wind speed, and weather icons based on live conditions.
-
-## 🔗 Live Demo
+A fully responsive Weather App built using HTML, CSS, and JavaScript, powered by the OpenWeatherMap API and Unsplash API.
+It allows users to check real-time weather conditions by city name or their current location, displaying temperature, humidity, wind speed, and dynamically changing backgrounds based on weather conditions.
 
 🌐 [View Live on GitHub Pages](https://andajofweather.netlify.app/)  
 
 
 ## 📌 Features
 
-- 🔍 Search weather by **city name**
-- 🌡️ Displays **temperature in °C**, **humidity**, and **wind speed**
-- 🖼️ Dynamic weather icons for conditions like clouds, rain, drizzle, etc.
-- ⚠️ Handles invalid or misspelled city names with an error message
-- 📱 Fully responsive UI for both desktop and mobile devices
-- 🎨 Clean and modern design using CSS gradients and flexbox
+🔍 Search weather by city name
+
+📍 Get weather for your current location using geolocation
+
+🌡️ Displays temperature in °C, humidity, and wind speed
+
+🖼️ Dynamic backgrounds from Unsplash based on weather and location
+
+🌤️ Weather icons for conditions like clouds, rain, drizzle, mist, etc.
+
+⚠️ Handles invalid or misspelled city names with an error message
+
+📱 Fully responsive UI for mobile, tablet, and desktop
+
+🎨 Smooth transitions for backgrounds and interactive buttons
 
 
 ## 🛠️ Tech Stack
@@ -25,41 +33,43 @@ A fully responsive Weather App built using **HTML**, **CSS**, and **JavaScript**
 ![OpenWeatherMap](https://img.shields.io/badge/OpenWeatherMap-API-orange?logo=OpenWeatherMap&logoColor=white)
 
 
-# ⚙️ How It Works
+## ⚙️ How It Works
 
-User types a city name and clicks the search button.
+User types a city name or clicks "My Location".
 
-The app sends a GET request to the OpenWeatherMap API with the city name.
+App fetches weather data from OpenWeatherMap API.
 
-On a successful response:
+Weather details (temperature, humidity, wind) and icons are displayed.
 
-It shows the temperature, humidity, wind speed, and condition.
+Unsplash API fetches a location-specific background image based on the current weather.
 
-It changes the icon based on weather (e.g., clouds, rain).
+Smooth transitions ensure the background and UI update gracefully.
 
-If the city name is invalid, an error message is shown to the user.
+Invalid city names show a clear error message.
 
-# 🌐 API Reference
-The app uses the OpenWeatherMap API:
-
-Base URL:
-
-bash
-Copy
-Edit
+## 🌐 API References
+OpenWeatherMap
 https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}&units=metric
+
+
 q → city name
 
-appid → your API key
+appid → your OpenWeatherMap API key
 
-units → metric for Celsius
+units=metric → Celsius
 
-🔑 Note: You need to sign up at https://openweathermap.org to get a free API key.
+🔑 Free API key available at OpenWeatherMap
+.
 
-# 📷 Screenshots
+Unsplash
+https://api.unsplash.com/photos/random?query={weather}+{city}&orientation=landscape&client_id={API key}
 
-![image alt](https://github.com/itsgauresh/weatherapp/blob/106a989ef91115d12a5ac510c19739430492b83d/Screenshot%202025-06-27%20235438.png)
-![image alt](https://github.com/itsgauresh/weatherapp/blob/106a989ef91115d12a5ac510c19739430492b83d/Screenshot%202025-06-27%20235502.png)
+
+Dynamically fetches a background image based on weather condition and city.
+
+client_id → your Unsplash API key
+
+Orientation set to landscape for fullscreen backgrounds.
 
 # ⭐ If you found this project helpful, feel free to give a star!
 
@@ -74,7 +84,7 @@ This `README.md` is designed to impress recruiters and guide contributors profes
 ## 📁 Project Structure
 
 ```plaintext
-weatherapp/
+andaaj-weather/
 ├── images/                  # Weather icons and UI assets
 │   ├── clouds.png
 │   ├── clear.png
@@ -86,6 +96,8 @@ weatherapp/
 │   └── search.png
 │
 ├── index.html               # Main HTML file
-├── style.css                # Styling and responsiveness
+├── style.css                # Styling, responsiveness, hover effects
+├── script.js                # JavaScript logic (OpenWeatherMap + Unsplash API)
 ├── README.md                # Project overview and documentation
+
 
