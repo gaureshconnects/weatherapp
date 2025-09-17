@@ -6,27 +6,28 @@
   <title>Andaaj of Weather</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
 </head>
 <body>
 
- <nav>
-  <h1><i class="fas fa-cloud-sun"></i> Andaaj of Weather</h1>
-  <ul>
-    <li onclick="getLocationWeather()">
-      <i class="fas fa-map-marker-alt"></i> My Location
-    </li>
-  </ul>
-</nav>
+  <!-- Navbar -->
+  <nav>
+    <h1><i class="fas fa-cloud-sun"></i> Andaaj of Weather</h1>
+    <ul>
+      <li onclick="getLocationWeather()">
+        <i class="fas fa-map-marker-alt"></i> My Location
+      </li>
+    </ul>
+  </nav>
 
-
-
+  <!-- Main Card -->
   <div class="card">
+    <!-- Search Box -->
     <div class="search">
       <input type="text" placeholder="Enter city name" spellcheck="false" />
-      <button><img src="images/search.png" /></button>
+      <button><i class="fas fa-search"></i></button>
     </div>
 
+    <!-- Top Cities -->
     <div class="top-cities">
       <button onclick="checkWeather('Mumbai')">Mumbai</button>
       <button onclick="checkWeather('Delhi')">Delhi</button>
@@ -35,24 +36,27 @@
       <button onclick="checkWeather('Kolkata')">Kolkata</button>
     </div>
 
+    <!-- Error Box -->
     <div class="error">
-      <p>⚠️ Invalid City Name</p>
+      <p><i class="fas fa-exclamation-triangle"></i> Invalid City Name</p>
     </div>
 
+    <!-- Weather Info -->
     <div class="weather" style="display: none;">
-      <img src="images/clear.png" class="weather-icon" />
+      <img src="images/clear.png" class="weather-icon" alt="Weather Icon"/>
       <h1 class="temp">22°C</h1>
       <h2 class="city">City</h2>
+      <div class="condition"></div>
       <div class="details">
         <div class="col">
-          <img src="images/humidity.png" />
+          <img src="images/humidity.png" alt="Humidity"/>
           <div>
             <p class="humidity">50%</p>
             <p>Humidity</p>
           </div>
         </div>
         <div class="col">
-          <img src="images/wind.png" />
+          <img src="images/wind.png" alt="Wind"/>
           <div>
             <p class="wind">15 km/h</p>
             <p>Wind Speed</p>
@@ -60,8 +64,23 @@
         </div>
       </div>
     </div>
+
+    <!-- AQI Box -->
+    <div class="aqi" style="display: none; margin-top: 20px; text-align: center;"></div>
+
   </div>
 
+  <div class="news-section">
+  <h2><i class="fas fa-newspaper"></i> Latest News</h2>
+  <div class="news-cards"></div>
+</div>
+
+
+
+
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
 </html>
+
+
