@@ -1,4 +1,4 @@
-##🌦️ Andaaj of Weather
+## 🌦️ Andaaj of Weather
 
 A fully responsive Weather App built using HTML, CSS, and JavaScript, powered by the OpenWeatherMap API and Unsplash API.
 It allows users to check real-time weather conditions by city name or their current location, displaying temperature, humidity, wind speed, and dynamically changing backgrounds based on weather conditions.
