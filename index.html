@@ -3,94 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather APP</title>
+  <title>Andaaj of Weather</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
 </head>
 <body>
 
-<div class="card">
-  <div class="search">
-    <input type="text" placeholder="Enter city name" spellcheck="false" />
-    <button><img src="images/search.png" /></button>
-  </div>
+ <nav>
+  <h1><i class="fas fa-cloud-sun"></i> Andaaj of Weather</h1>
+  <ul>
+    <li onclick="getLocationWeather()">
+      <i class="fas fa-map-marker-alt"></i> My Location
+    </li>
+  </ul>
+</nav>
 
-  <div class="error" style="display: none;">
-    <p>Invalid City Name</p>
-  </div>
 
-  <div class="weather">
-    <img src="images/rain.png" class="weather-icon" />
-    <h1 class="temp">22°C</h1>
-    <h2 class="city">New York</h2>
-    <div class="details">
-      <div class="col">
-        <img src="images/humidity.png" />
-        <div>
-          <p class="humidity">50%</p>
-          <p>Humidity</p>
+
+  <div class="card">
+    <div class="search">
+      <input type="text" placeholder="Enter city name" spellcheck="false" />
+      <button><img src="images/search.png" /></button>
+    </div>
+
+    <div class="top-cities">
+      <button onclick="checkWeather('Mumbai')">Mumbai</button>
+      <button onclick="checkWeather('Delhi')">Delhi</button>
+      <button onclick="checkWeather('Bengaluru')">Bengaluru</button>
+      <button onclick="checkWeather('Chennai')">Chennai</button>
+      <button onclick="checkWeather('Kolkata')">Kolkata</button>
+    </div>
+
+    <div class="error">
+      <p>⚠️ Invalid City Name</p>
+    </div>
+
+    <div class="weather" style="display: none;">
+      <img src="images/clear.png" class="weather-icon" />
+      <h1 class="temp">22°C</h1>
+      <h2 class="city">City</h2>
+      <div class="details">
+        <div class="col">
+          <img src="images/humidity.png" />
+          <div>
+            <p class="humidity">50%</p>
+            <p>Humidity</p>
+          </div>
         </div>
-      </div>
-      <div class="col">
-        <img src="images/wind.png" />
-        <div>
-          <p class="wind">15 km/h</p>
-          <p>Wind Speed</p>
+        <div class="col">
+          <img src="images/wind.png" />
+          <div>
+            <p class="wind">15 km/h</p>
+            <p>Wind Speed</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<script>
-  const apikey = "be51b293ec9f82ab950b6a342d92ae08";
-  const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
-
-  const searchBox = document.querySelector(".search input");
-  const searchBtn = document.querySelector(".search button");
-  const weatherIcon = document.querySelector(".weather-icon");
-  const errorBox = document.querySelector(".error");
-  const weatherBox = document.querySelector(".weather");
-
-  async function checkWeather(city) {
-    const response = await fetch(apiUrl + city + `&appid=${apikey}`);
-    const data = await response.json();
-
-    if (response.status === 404 || !data.weather) {
-      weatherBox.style.display = "none";
-      errorBox.style.display = "block";
-      return;
-    }
-
-    errorBox.style.display = "none";
-    weatherBox.style.display = "block";
-
-    document.querySelector(".city").innerHTML = data.name;
-    document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
-    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-    document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-
-    const condition = data.weather[0].main.toLowerCase();
-
-    if (condition === "clouds") {
-      weatherIcon.src = "images/clouds.png";
-    } else if (condition === "clear") {
-      weatherIcon.src = "images/clear.png";
-    } else if (condition === "rain") {
-      weatherIcon.src = "images/rain.png";
-    } else if (condition === "drizzle") {
-      weatherIcon.src = "images/drizzle.png";
-    } else if (condition === "mist") {
-      weatherIcon.src = "images/mist.png";
-    } else {
-      weatherIcon.src = "images/default.png"; // fallback image
-    }
-  }
-
-  searchBtn.addEventListener("click", () => {
-    const city = searchBox.value.trim();
-    if (city) checkWeather(city);
-  });
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
