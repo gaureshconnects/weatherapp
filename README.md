@@ -3,7 +3,7 @@
 A fully responsive Weather App built using HTML, CSS, and JavaScript, powered by the OpenWeatherMap API and Unsplash API.
 It allows users to check real-time weather conditions by city name or their current location, displaying temperature, humidity, wind speed, and dynamically changing backgrounds based on weather conditions.
 
-🌐 [View Live on GitHub Pages](https://andajofweather.netlify.app/)  
+🌐 [View Live](https://andajofweather.netlify.app/)  
 
 
 ## 📌 Features
