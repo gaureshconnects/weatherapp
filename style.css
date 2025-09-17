@@ -9,12 +9,13 @@ body {
   background: #222;
 }
 
+/* Card styling */
 .card {
   width: 90%;
   max-width: 470px;
   background: linear-gradient(135deg, #00feba, #5b548a);
   color: #fff;
-  margin: 100px auto 0;
+  margin: 80px auto 0;
   border-radius: 20px;
   padding: 40px 35px;
   text-align: center;
@@ -48,6 +49,9 @@ body {
   width: 60px;
   height: 60px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search button img {
@@ -77,12 +81,15 @@ body {
   justify-content: space-between;
   padding: 0 20px;
   margin-top: 50px;
+  flex-wrap: wrap; /* helps in smaller screens */
 }
 
 .col {
   display: flex;
   align-items: center;
   text-align: left;
+  margin-bottom: 20px;
+  flex: 1 1 45%; /* two columns on medium screens */
 }
 
 .col img {
@@ -110,4 +117,77 @@ body {
   padding: 8px 12px;
   border-radius: 8px;
   display: none;
+}
+
+/* 📱 Mobile (up to 600px) */
+@media (max-width: 600px) {
+  .card {
+    padding: 25px 20px;
+    margin: 40px auto;
+  }
+
+  .search input {
+    font-size: 14px;
+    height: 45px;
+    padding: 8px 15px;
+    margin-right: 8px;
+  }
+
+  .search button {
+    width: 45px;
+    height: 45px;
+  }
+
+  .temp {
+    font-size: 50px;
+  }
+
+  .city {
+    font-size: 28px;
+  }
+
+  .col {
+    flex: 1 1 100%; /* stack columns */
+    justify-content: flex-start;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 20px;
+  }
+
+  .weather-icon {
+    width: 120px;
+  }
+}
+
+/* 📱 Tablets (600px – 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card {
+    max-width: 600px;
+    padding: 35px 30px;
+  }
+
+  .temp {
+    font-size: 65px;
+  }
+
+  .city {
+    font-size: 35px;
+  }
+
+  .col {
+    flex: 1 1 45%; /* 2 per row */
+  }
+
+  .weather-icon {
+    width: 150px;
+  }
+}
+
+/* 💻 Laptops & larger screens (1025px and above) */
+@media (min-width: 1025px) {
+  .card {
+    max-width: 600px;
+  }
 }
