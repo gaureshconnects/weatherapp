@@ -19,68 +19,77 @@
     </ul>
   </nav>
 
-  <!-- Main Card -->
-  <div class="card">
-    <!-- Search Box -->
-    <div class="search">
-      <input type="text" placeholder="Enter city name" spellcheck="false" />
-      <button><i class="fas fa-search"></i></button>
-    </div>
+  <!-- Wrapper -->
+  <div class="main-container">
 
-    <!-- Top Cities -->
-    <div class="top-cities">
-      <button onclick="checkWeather('Mumbai')">Mumbai</button>
-      <button onclick="checkWeather('Delhi')">Delhi</button>
-      <button onclick="checkWeather('Bengaluru')">Bengaluru</button>
-      <button onclick="checkWeather('Chennai')">Chennai</button>
-      <button onclick="checkWeather('Kolkata')">Kolkata</button>
-    </div>
 
-    <!-- Error Box -->
-    <div class="error">
-      <p><i class="fas fa-exclamation-triangle"></i> Invalid City Name</p>
-    </div>
+    <!-- Weather Card (Center) -->
+    <div class="card">
+      <!-- Search Box -->
+      <div class="search">
+        <input type="text" placeholder="Enter city name" spellcheck="false" />
+        <button><i class="fas fa-search"></i></button>
+      </div>
 
-    <!-- Weather Info -->
-    <div class="weather" style="display: none;">
-      <img src="images/clear.png" class="weather-icon" alt="Weather Icon"/>
-      <h1 class="temp">22°C</h1>
-      <h2 class="city">City</h2>
-      <div class="condition"></div>
-      <div class="details">
-        <div class="col">
-          <img src="images/humidity.png" alt="Humidity"/>
-          <div>
-            <p class="humidity">50%</p>
-            <p>Humidity</p>
-          </div>
-        </div>
-        <div class="col">
-          <img src="images/wind.png" alt="Wind"/>
-          <div>
-            <p class="wind">15 km/h</p>
-            <p>Wind Speed</p>
-          </div>
-        </div>
+      <!-- Top Cities -->
+      <div class="top-cities">
+        <button onclick="checkWeather('Mumbai')">Mumbai</button>
+        <button onclick="checkWeather('Delhi')">Delhi</button>
+        <button onclick="checkWeather('Bengaluru')">Bengaluru</button>
+        <button onclick="checkWeather('Chennai')">Chennai</button>
+        <button onclick="checkWeather('Kolkata')">Kolkata</button>
+      </div>
+
+      <!-- Error Box -->
+      <div class="error">
+        <p><i class="fas fa-exclamation-triangle"></i> Invalid City Name</p>
+      </div>
+
+     <!-- Weather Info -->
+<div class="weather" style="display: none;">
+  <!-- Weather condition icon -->
+  <i class="fas fa-sun weather-icon"></i>  
+
+  <h1 class="temp">22°C</h1>
+  <h2 class="city">City</h2>
+  <div class="condition"></div>
+
+  <div class="details">
+    <div class="col">
+      <i class="fas fa-tint"></i>  <!-- Humidity icon -->
+      <div>
+        <p class="humidity">50%</p>
+        <p>Humidity</p>
       </div>
     </div>
-
-    <!-- AQI Box -->
-    <div class="aqi" style="display: none; margin-top: 20px; text-align: center;"></div>
-
+    <div class="col">
+      <i class="fas fa-wind"></i>  <!-- Wind icon -->
+      <div>
+        <p class="wind">15 km/h</p>
+        <p>Wind Speed</p>
+      </div>
+    </div>
   </div>
-
-  <div class="news-section">
-  <h2><i class="fas fa-newspaper"></i> Latest News</h2>
-  <div class="news-cards"></div>
 </div>
 
 
+      <!-- AQI Box -->
+      <div class="aqi" style="display: none; margin-top: 20px; text-align: center;"></div>
+
+     
+
+ <!-- jQuery UI CSS -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- jQuery UI -->
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
 
   <!-- JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
-
-

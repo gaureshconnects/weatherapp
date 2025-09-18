@@ -126,6 +126,19 @@ nav ul li {
   margin-top: 10px;
 }
 
+.weather-icon {
+  font-size: 80px;
+  color: #f7d354; /* sun yellow */
+  margin-bottom: 10px;
+}
+
+.details .col i {
+  font-size: 28px;
+  color: #00c3ff; /* matches weather theme */
+  margin-right: 10px;
+}
+
+
 /* Weather Info */
 .weather img.weather-icon {
   width: 100px;
@@ -339,4 +352,24 @@ nav ul li {
 #theme-toggle {
   transition: all 0.3s ease;
 }
+
+
+.ui-autocomplete {
+  background: #fff;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000; /* keeps it above cards */
+}
+
+.ui-menu-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.ui-menu-item:hover {
+  background: #f0f0f0;
+}
+
+
 
